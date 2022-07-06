@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Simulador de Financimento</title>
+</head>
+
+<body>
+    <h1>Simulador de Financiamento com Sistema de Amortização Constante (SAC) </h1>
+    <div class="dados">
+        <input class=valor id="textoValor" type="text" placeholder="Valor do Bem"><br>
+        <input class=valor id="textoEntrada" type="text" placeholder="Valor da Entrada"><br>
+        <input class=valor id="textoTaxaJuros" type="text" placeholder="Taxa de Juros (%)"><br>
+        <input class=valor id="textoPrazo" type="text" placeholder="Prazo (em meses)"><br>
+        <button id="botaoCalcular">Calcular</button>
+        <input id="comCarencia" type="checkbox">Com carência?
+    </div>
+    <select id="listaSuspensa" hidden>
+        <option value="2">2 meses</option>
+        <option value="3">3 meses</option>
+        <option value="4">4 meses</option>
+    </select>
+    <p></p>
+    <table>
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Valor da Parcela</th>
+                <th>Amortização</th>
+                <th>Juros</th>
+                <th>Saldo Devedor</th>
+            </tr>
+        </thead>
+        <tbody id="corpoTabela"></tbody>
+    </table>
+    <script type="module" src="/js/script.js"></script>
+</body>
+
+</html>
